@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: im's space
+subtitle: 'always learning'
 description: ''
 keywords:
-author: John Doe
+author: Jianfeng Cai
 language: en
 timezone: ''
 
@@ -97,4 +97,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/ImproperMelon/ImproperMelon.github.io.git
-  branch: master
+  # branch: master
