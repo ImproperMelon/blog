@@ -96,5 +96,5 @@ theme: icarus
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ImproperMelon/ImproperMelon.github.io
+  repo: https://github.com/ImproperMelon/ImproperMelon.github.io.git
   branch: master
