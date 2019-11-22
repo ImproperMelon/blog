@@ -5,6 +5,11 @@
   "hexo": {
     "version": "4.0.0"
   },
+  "scripts": {
+    "sync": "npx yuque-hexo sync",
+    "clean:yuque": "npx yuque-hexo clean",
+    "deploy": "npm run sync && npx hexo clean && npx hexo g -d"
+  },
   "dependencies": {
     "hexo": "^4.0.0",
     "hexo-deployer-git": "^2.1.0",
@@ -23,11 +28,6 @@
     "repo": "notes",
     "mdNameFormat": "title",
     "postPath": "source/_posts/yuque"
-  },
-  "scripts": {
-    "sync": "yuque-hexo sync",
-    "clean:yuque": "yuque-hexo clean",
-    "deploy": "npm run sync && hexo clean && hexo g -d"
   },
   "devDependencies": {
     "hexo-util": "^0.6.3",
