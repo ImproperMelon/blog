@@ -8,7 +8,7 @@ branches:
 before_install:
 - git config --global user.name 'ImproperMelon'
 - git config --global user.email 2422048218@qq.com
-- sed -i'' "s~https://github.com/ImproperMelon/ImproperMelon.github.io.git~https://${Github-Access-Token}@github.com/ImproperMelon/ImproperMelon.github.io.git~" _config.yml
+- sed -i'' "s~https://github.com/ImproperMelon/ImproperMelon.github.io.git~https://${ACCESS_TOKEN}@github.com/ImproperMelon/ImproperMelon.github.io.git~" _config.yml
 install:
 - npm install hexo-cli -g
 - npm install
