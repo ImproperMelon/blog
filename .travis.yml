@@ -14,3 +14,6 @@ install:
 - npm install
 script:
 - npm run deploy
+cache:
+  directories:
+    - node_modules
