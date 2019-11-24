@@ -6,7 +6,7 @@ branches:
   only:
   - master
 before_install:
-- sed -i'' "s~https://github.com/ImproperMelon/ImproperMelon.github.io.git~https://${ACCESS_TOKEN}@github.com/ImproperMelon/ImproperMelon.github.io.git~" _config.yml
+- sed -i'' "s~git@github.com:~https://${ACCESS_TOKEN}@github.com/~" _config.yml
 - git config --global user.name 'ImproperMelon'
 - git config --global user.email 2422048218@qq.com
 install:
