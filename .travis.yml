@@ -1,26 +1,25 @@
 language: node_js
-sudo: false
-node_js:
-- '8'
+node_js: stable
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "ImproperMelon"
+  - git config user.email 2422048218@qq.com
+  - git add .
+  - git commit -m "Update"
+  - git push --force --quiet "https://${ACCESS_TOKEN}@${GH_REF}" master:master
+
 branches:
   only:
-  - master
-before_install:
-- openssl aes-256-cbc -K $encrypted_26395f532ba9_key -iv $encrypted_26395f532ba9_iv
-  -in id_rsa.enc -out id_rsa -d
-# - sed -i'' "s~git@github.com:~https://${ACCESS_TOKEN}@github.com/~" _config.yml
-- cp  .travis/id_rsa ~/.ssh/id_rsa
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
-- git config --global user.name 'ImproperMelon'
-- git config --global user.email 2422048218@qq.com
-install:
-- npm install hexo-cli -g
-- npm install
-script:
-- npm run deploy
-cache:
-  directories:
-  - node_modules
+    - master
+env:
+ global:
+   - GH_REF: github.com/ImproperMelon/ImproperMelon.github.io.git
